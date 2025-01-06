@@ -1,11 +1,63 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/Resources/fonts/Ubuntu-Regular.ttf") format("truetype");
+}
+
 :root {
+  --primary: #f8fafc;
+  --secondary: #fbfbfb;
+  --tertiary: #202340;
+  --primary-font: "Ubuntu";
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  min-height: 100vh;
+  font-family: var(--primary-font);
+  background-color: var(--primary);
+}
+a {
+  color: white;
+}
+.top-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+  padding: 0.5rem;
+  background-color: var(--tertiary);
+  color: white;
+}
+.mid-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1rem 0.5rem;
+  h1 {
+    font-size: 2.5rem;
+    color: cornflowerblue;
+  }
+}
+.search-bar {
+  all: unset;
+  width: 50%;
+  padding: 0.75rem 0.5rem;
+  border-radius: 10px;
+  background-color: var(--secondary);
+}
+
+.usr-icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--tertiary);
+}
 /* responsive */
 .container {
   max-width: 100%;
