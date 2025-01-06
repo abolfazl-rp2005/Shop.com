@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="Resources/stylesheets/style.css" />
+    <script type="module" src="Resources/scripts/main.js"></script>
   </head>
   <body>
     <header>
@@ -37,7 +38,7 @@
       </section>
       <section class="bottom-header">
         <ul class="botm-list">
-          <i class="bx bx-menu bx-md"></i>
+          <i class="bx bx-menu bx-md" id="js-open-side-menu"></i>
           <li class="li-item"><a href="">brands</a></li>
           <li class="li-item"><a href="">deals</a></li>
           <li class="li-item"><a href="">stores</a></li>
@@ -46,6 +47,37 @@
         <p>$6,073,506,282 Awarded in Cash! <a href="#">Learn More</a></p>
         <button class="getpaid-btn">get paid now!</button>
       </section>
-    </header> 
+      <div class="side-menu display-none" id="js-side-menu">
+        <i class="bx bx-x bx-md" id="js-close-side-menu"></i>
+        <h2>SHOP.COM</h2>
+        <h3>Categories</h3>
+        <ul class="side-menu-categories">
+          <li class="side-list-item">
+            <a href="#" class="side-link-item">Health & Nutrition</a>
+          </li>
+          <li class="side-list-item">
+            <a href="#" class="side-link-item">Clothing</a>
+          </li>
+          <li class="side-list-item">
+            <a href="#" class="side-link-item">Cosmetics</a>
+          </li>
+          <li class="side-list-item">
+            <a href="#" class="side-link-item">Jewelry</a>
+          </li>
+          <li class="side-list-item">
+            <a href="#" class="side-link-item">Electronics</a>
+          </li>
+          <li class="side-list-item">
+            <a href="#" class="side-link-item">Perfumes</a>
+          </li>
+          <li class="side-list-item">
+            <a href="#" class="side-link-item">Kids</a>
+          </li>
+          <li class="side-list-item">
+            <a href="#" class="side-link-item">Petcare</a>
+          </li>
+        </ul>
+      </div>
+    </header>
   </body>
 </html>

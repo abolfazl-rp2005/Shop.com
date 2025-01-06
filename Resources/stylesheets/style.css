@@ -8,6 +8,7 @@
   --secondary: #fbfbfb;
   --tertiary: #202340;
   --shadow: #3b3b3b5c;
+  --transition-clr: #e8e8e8;
 
   --font: "Ubuntu";
 }
@@ -79,7 +80,7 @@ a {
     text-decoration: none;
     text-transform: capitalize;
   }
-  i{
+  i {
     cursor: pointer;
   }
 }
@@ -91,6 +92,61 @@ a {
   color: var(--primary);
   font-family: var(--font);
   padding: 0.5rem 1rem;
+}
+.side-menu {
+  width: 300px;
+  min-height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--primary);
+  box-shadow: 3px 0 4px var(--shadow);
+  i {
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+  }
+}
+.side-menu-open-animation {
+  animation: openclose-animation 450ms ease-out;
+}
+.side-menu-close-animation {
+  animation: openclose-animation 450ms reverse ease-in;
+}
+@keyframes openclose-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.side-menu h2 {
+  padding: 2rem 0.5rem;
+  text-align: center;
+}
+.side-menu h3 {
+  padding: 0.5rem;
+}
+.side-menu-categories {
+  width: 100%;
+  list-style: none;
+}
+.side-list-item {
+  padding: 1rem 1.5rem;
+  &:hover {
+    background-color: var(--transition-clr);
+  }
+}
+.side-link-item {
+  color: var(--tertiary);
+  text-decoration: none;
+}
+
+.display-none {
+  display: none;
 }
 /* responsive */
 .container {
