@@ -7,7 +7,9 @@
   --primary: #f8fafc;
   --secondary: #fbfbfb;
   --tertiary: #202340;
-  --primary-font: "Ubuntu";
+  --shadow: #3b3b3b5c;
+
+  --font: "Ubuntu";
 }
 * {
   margin: 0;
@@ -16,7 +18,7 @@
 }
 body {
   min-height: 100vh;
-  font-family: var(--primary-font);
+  font-family: var(--font);
   background-color: var(--primary);
 }
 a {
@@ -57,6 +59,38 @@ a {
   align-items: center;
   gap: 5px;
   color: var(--tertiary);
+}
+.bottom-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  box-shadow: 1px 1px 5px var(--shadow);
+}
+.botm-list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  a {
+    color: var(--tertiary);
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  i{
+    cursor: pointer;
+  }
+}
+.getpaid-btn {
+  all: unset;
+  cursor: pointer;
+  background-color: cornflowerblue;
+  border-radius: 15px;
+  color: var(--primary);
+  font-family: var(--font);
+  padding: 0.5rem 1rem;
 }
 /* responsive */
 .container {
