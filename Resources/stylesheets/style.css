@@ -212,6 +212,63 @@ a {
 .hidden-block {
   display: none;
 }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 125px;
+  padding: 1rem 0.5rem;
+  background-color: var(--tertiary);
+}
+.upper-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  color: white;
+  padding: 1rem;
+}
+.email-input{
+  background-color: var(--primary);
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding: 0.3rem 1.5rem 0.3rem 0.5rem;
+}
+.footer-buttons{
+  all: unset;
+  cursor: pointer;
+  background-color: grey;
+  border-radius: 4px;
+  padding: 0.3rem 1rem;
+  margin-left: 2px;
+}
+.footer-navigation {
+  margin: auto;
+  width: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.fo-navli {
+  border-right: solid white 1px;
+  padding: 0.2rem 0.5rem;
+}
+.fo-navli:last-child {
+  border: none;
+}
+.fo-navlink {
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+.footer-icons {
+  color: white;
+}
 /* xs */
 @media (min-width: 475px) {
   .container {
