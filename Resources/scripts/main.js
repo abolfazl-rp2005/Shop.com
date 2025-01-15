@@ -1,6 +1,7 @@
 const sideMenuOpener = document.getElementById("js-open-side-menu");
 const closeSideMenu = document.getElementById("js-close-side-menu");
 import { sliderInitialize } from "./top-slider.js";
+import { Products} from "./products.js";
 window.onload = () => {
   sideMenuOpener.addEventListener("click", () => {
     openCloseSideMenu();
@@ -10,6 +11,8 @@ window.onload = () => {
   });
 
   sliderInitialize();
+  console.log(Products.productList);
+  Products.generateProductDom();
 };
 
 function openCloseSideMenu() {
