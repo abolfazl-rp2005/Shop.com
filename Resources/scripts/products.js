@@ -44,11 +44,53 @@ export const Products = {
       document
         .getElementsByClassName("add-to-cart-button")
         [index].addEventListener("click", () => {
-          this.addToCart(item.id);
+          this.cart.addToCart(item.id);
         });
     });
   },
-  addToCart(id) {
-    console.log(id);
+  cart: {
+    addToCart(id) {
+      console.log(id);
+    },
+  },
+  categories: {
+    categoriesList: [
+      {
+        name: "Health & Nutrition",
+        imageURL:
+          "https://img.shop.com/Image/homepage/healthnutirtion-isotonix1704387293164.jpeg?id=5296478",
+      },
+      {
+        name: "Clothing",
+        imageURL:
+          "https://www.pngarts.com/files/3/Clothing-PNG-Image-with-Transparent-Background.png",
+      },
+      {
+        name: "Cosmetics",
+        imageURL:
+          "https://img.shop.com/Image/homepage/shop-us-motives-mascara1736979836002.jpg?id=5318008",
+      },
+      {
+        name: "Jewlery",
+        imageURL:
+          "https://img.shop.com/Image/homepage/layered-necklace1704387335830.jpeg?id=5296482",
+      },
+      {
+        name: "Perfumes",
+        imageURL:
+          "https://file.aiquickdraw.com/imgcompressed/img/compressed_5dd8c17bb8f3eac7156b97fc603ec56d.webp",
+      },
+    ],
+    generateProCategoriesDom() {
+      const categoriesWrapper = document.getElementById("Categories-Wrapper");
+      this.categoriesList.forEach((item, index) => {
+        const categoryElem = document.createElement("div");
+        categoryElem.innerHTML = `<a href="#" class="category-link">
+        <h3>${item.name}</h3>
+        <img src="${item.imageURL}" width=175/></a>`;
+        categoryElem.classList.add("category");
+        categoriesWrapper.append(categoryElem);
+      });
+    },
   },
 };
